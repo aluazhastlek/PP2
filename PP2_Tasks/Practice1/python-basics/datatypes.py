@@ -9,3 +9,4 @@ print(type(x))
 #3
 x = 20.5
 print(type(x)) 
+# practice 2 committed

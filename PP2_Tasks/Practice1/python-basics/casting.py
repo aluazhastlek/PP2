@@ -1,3 +1,4 @@
+# practice 2 committed
 #1
 x = int(1)   # x will be 1
 y = int(2.8) # y will be 2

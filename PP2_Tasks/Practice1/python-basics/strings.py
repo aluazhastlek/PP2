@@ -21,3 +21,4 @@ print(a[1])
 #5
 for x in "banana":
   print(x)
+# practice 2 committed
