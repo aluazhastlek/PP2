@@ -9,7 +9,7 @@ print("=" * 80)
 print(f"{'DN':60} {'Description':15} {'Speed':8} {'MTU'}")
 print("-" * 80)
 
-# Loop through JSON data
+# Loop through JSON data-
 for item in data["imdata"]:
     attributes = item["l1PhysIf"]["attributes"]
     

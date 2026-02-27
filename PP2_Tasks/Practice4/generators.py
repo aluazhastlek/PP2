@@ -1,6 +1,4 @@
-# ============================================
 # 1) Generator that generates squares up to N
-# ============================================
 
 def square_generator(n):
     # Yields the square of numbers from 0 to n
@@ -14,9 +12,7 @@ for value in square_generator(N):
     print(value)
 
 
-# ======================================================
 # 2) Generator to print even numbers between 0 and n
-# ======================================================
 
 def even_numbers(n):
     # Yields even numbers from 0 to n
@@ -30,9 +26,7 @@ n = int(input("Enter n: "))
 print(",".join(str(num) for num in even_numbers(n)))
 
 
-# ==================================================================
 # 3) Generator for numbers divisible by both 3 and 4 (0 to n)
-# ==================================================================
 
 def divisible_by_3_and_4(n):
     # Yields numbers divisible by both 3 and 4 (i.e., divisible by 12)
@@ -47,9 +41,8 @@ for num in divisible_by_3_and_4(n):
     print(num)
 
 
-# ==========================================================
 # 4) Generator squares from a to b
-# ==========================================================
+
 
 def squares(a, b):
     # Yields squares of numbers from a to b
@@ -64,9 +57,7 @@ for value in squares(a, b):
     print(value)
 
 
-# ==========================================================
 # 5) Generator that returns numbers from n down to 0
-# ==========================================================
 
 def countdown(n):
     # Yields numbers from n down to 0
