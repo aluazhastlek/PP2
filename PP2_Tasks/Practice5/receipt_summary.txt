@@ -1,0 +1,7 @@
+=== RECEIPT SUMMARY ===
+Date: 18.04.2019
+Time: 11:13:58
+Payment method: Банковская карта
+Total: 18009.00
+
+Products:

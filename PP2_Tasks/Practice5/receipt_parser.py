@@ -82,22 +82,39 @@ def main():
 
     parsed = parse_receipt(receipt_text)
 
-    #  JSON output 
+    # JSON output to console
     print("=== JSON OUTPUT ===")
-    print(json.dumps(parsed, ensure_ascii=False, indent=4))
+    json_output = json.dumps(parsed, ensure_ascii=False, indent=4)
+    print(json_output)
 
-    #  Formatted output 
-    print("\n=== RECEIPT SUMMARY ===")
+    # Save JSON to file
+    with open("parsed_receipt.json", "w", encoding="utf-8") as json_file:
+        json_file.write(json_output)
 
-    print(f"Date: {parsed['date']}")
-    print(f"Time: {parsed['time']}")
-    print(f"Payment method: {parsed['payment_method']}")
-    print(f"Total: {parsed['total_amount']:.2f}")
-
-    print("\nProducts:")
+    # Create formatted receipt summary
+    summary_lines = []
+    summary_lines.append("=== RECEIPT SUMMARY ===")
+    summary_lines.append(f"Date: {parsed['date']}")
+    summary_lines.append(f"Time: {parsed['time']}")
+    summary_lines.append(f"Payment method: {parsed['payment_method']}")
+    summary_lines.append(f"Total: {parsed['total_amount']:.2f}")
+    summary_lines.append("\nProducts:")
 
     for i, product in enumerate(parsed["products"], 1):
-        print(f"{i}. {product['name']} — {product['price']:.2f}")
+        summary_lines.append(f"{i}. {product['name']} — {product['price']:.2f}")
+
+    summary_text = "\n".join(summary_lines)
+
+    # Print summary
+    print("\n" + summary_text)
+
+    # Save summary to text file
+    with open("receipt_summary.txt", "w", encoding="utf-8") as summary_file:
+        summary_file.write(summary_text)
+
+    print("\nFiles saved successfully:")
+    print("parsed_receipt.json")
+    print("receipt_summary.txt")
 
 
 if __name__ == "__main__":
