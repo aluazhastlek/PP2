@@ -17,18 +17,18 @@ def parse_receipt(text):
         p = p.replace(',', '.')
         prices.append(float(p))
 
-    # Extract product names with prices 
-    product_pattern = r'^\s*\d+\.\s*(.+?)\s+\d+[.,]\d{2}$'
-    product_matches = re.findall(product_pattern, text, re.MULTILINE)
+    # Extract products from receipt
+    product_pattern = r'\d+\.\s*\n(.+?)\n.*?\n([\d\s]+,\d{2})'
+    product_matches = re.findall(product_pattern, text)
 
     products = []
 
-    for i, name in enumerate(product_matches):
-        if i < len(prices):
-            products.append({
-                "name": name.strip(),
-                "price": prices[i]
-            })
+    for name, price in product_matches:
+        price = price.replace(' ', '').replace(',', '.')
+        products.append({
+            "name": name.strip(),
+            "price": float(price)
+        })
 
     # Extract total 
     total_pattern = r'(ИТОГО|TOTAL)[:\s]*([\d\s,\.]+)'
