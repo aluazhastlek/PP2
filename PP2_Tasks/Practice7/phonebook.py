@@ -58,7 +58,7 @@ def insert_from_csv(filename="contacts.csv"):
     try:
         with open(filename, "r", encoding="utf-8") as file:
             reader = csv.reader(file)
-            next(reader, None)  # skip header
+            next(reader, None)  
             for row in reader:
                 if len(row) >= 2:
                     first_name, phone = row[0].strip(), row[1].strip()
