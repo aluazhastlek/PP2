@@ -1,0 +1,9 @@
+#connect to database
+
+import psycopg2
+from config import load_config
+
+def get_connection():
+    config=load_config()
+    conn=psycopg2.connect(**config)
+    return conn
