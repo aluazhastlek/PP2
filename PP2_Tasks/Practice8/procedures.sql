@@ -67,7 +67,6 @@ BEGIN
     END IF;
 
     FOR i IN 1..arr_len LOOP
-        -- простая проверка: только цифры, длина 11
         IF p_phones[i] ~ '^[0-9]{11}$' THEN
             IF EXISTS (
                 SELECT 1
