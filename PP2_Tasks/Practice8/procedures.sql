@@ -10,13 +10,12 @@ BEGIN
     IF EXISTS (
         SELECT 1
         FROM phonebook
-        WHERE first_name = p_first_name
-          AND surname = p_surname
+        WHERE phone = p_phone
     ) THEN
         UPDATE phonebook
-        SET phone = p_phone
-        WHERE first_name = p_first_name
-          AND surname = p_surname;
+        SET first_name = p_first_name,
+            surname = p_surname
+        WHERE phone = p_phone;
     ELSE
         INSERT INTO phonebook(first_name, surname, phone)
         VALUES (p_first_name, p_surname, p_phone);
