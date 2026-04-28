@@ -1,0 +1,54 @@
+[
+    {
+        "first_name": "Madina",
+        "surname": "Akhmetova",
+        "email": "madina@gmail.com",
+        "birthday": "2005-04-15",
+        "group": "Friend",
+        "phones": [
+            {
+                "phone": "87001234567",
+                "type": "mobile"
+            }
+        ]
+    },
+    {
+        "first_name": "Ali",
+        "surname": "Khan",
+        "email": "ali@work.com",
+        "birthday": "2003-11-20",
+        "group": "Work",
+        "phones": [
+            {
+                "phone": "87007654321",
+                "type": "work"
+            }
+        ]
+    },
+    {
+        "first_name": "Aruzhan",
+        "surname": "Sultan",
+        "email": "aruzhan@mail.com",
+        "birthday": "2004-02-10",
+        "group": "Family",
+        "phones": [
+            {
+                "phone": "87005554433",
+                "type": "home"
+            }
+        ]
+    },
+    {
+        "first_name": "Dinmukhammed",
+        "surname": "Sarkytbek",
+        "email": "d_sarkytbek@kbtu.kz",
+        "birthday": "2007-06-11",
+        "group": "Friend",
+        "phones": [
+            {
+                "phone": "+77023753776",
+                "type": "mobile"
+            }
+        ]
+    }
+]
